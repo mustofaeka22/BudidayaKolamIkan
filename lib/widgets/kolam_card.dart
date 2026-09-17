@@ -219,29 +219,9 @@ class KolamCard extends StatelessWidget {
                     child: Stack(
                       fit: StackFit.expand,
                       children: [
-                        Image.network(
+                        Image.asset(
                           getFishImageUrl(),
                           fit: BoxFit.cover,
-
-                          // Loading gambar
-                          loadingBuilder: (
-                            context,
-                            child,
-                            loadingProgress,
-                          ) {
-                            if (loadingProgress == null) {
-                              return child;
-                            }
-
-                            return Container(
-                              color: Colors.blue.shade50,
-                              child: const Center(
-                                child: CircularProgressIndicator(
-                                  strokeWidth: 2,
-                                ),
-                              ),
-                            );
-                          },
 
                           // Jika gambar gagal dimuat
                           errorBuilder: (
